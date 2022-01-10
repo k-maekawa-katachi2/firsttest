@@ -1,0 +1,46 @@
+header {
+    background-color: orange;
+    height: auto;
+    text-align: right;
+    color:white;
+    padding-right: 10rem;
+}
+
+body {
+    font-size: 14pt;
+    color: #999;
+    margin: 5px;
+}
+
+.container{
+    height: 80vh;
+}
+h1 {
+    font-size: 50pt;
+    text-align: center;
+    color: white;
+}
+
+h4{
+    text-align: center;
+}
+
+
+.content {
+    /* margin: 10px; */
+    font-size: 20px;
+}
+
+.remaining{
+    text-align: right;
+    padding-top: 30px;
+}
+
+
+footer {
+    background-color: orange;
+    text-align: right;
+    color:white;
+    padding-right:15px;
+    margin-top: 3rem;
+}
