@@ -17,7 +17,6 @@ class ResultController extends Controller
             ->get();
     }
 
-
     /**　今回のデータを登録して、データを表示する */
     public function index(Request $request)
     {
@@ -49,7 +48,6 @@ class ResultController extends Controller
             return redirect()->route('show');
         }
     }
-
 
     /**　ゲーム中に過去の結果を見る */
     public function store()

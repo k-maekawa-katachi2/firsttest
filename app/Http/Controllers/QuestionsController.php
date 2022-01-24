@@ -13,7 +13,6 @@ class QuestionsController extends Controller
     /**
      *   ログイン後、質問スタート
      */
-
     public function start()
     {
         // questionNO1から開始　・・　id=1
@@ -34,22 +33,18 @@ class QuestionsController extends Controller
     }
 
 
-
     /**
-     * 2問目以降の質問の表示 
+     * 各問の解答および2問目以降の質問の表示 
      * 
      */
-    
     public function repeat(Request $request)
     {
 
         // ラジオボタンがチェックが入っているか確認する
         $answer = $request->answer;
-
         //    チェックが空(null)の場合、エラー表示を加えて表示する
         if ($answer == null) {
             $question = DB::table('questions')->where('id', $request->question_id)->first();
-
             // 次のID番号を取得するための変数を作成
             $next = DB::table('questions')->where('id', '>', $request->question_id)->first('id');
             // 次のID番号を取得するための変数を作成
@@ -62,7 +57,6 @@ class QuestionsController extends Controller
                 'ans_error' => '解答項目のどれかにチェックを入れてください'
             ]);
         }
-
 
         $param = [
             'user_id' => Auth::user()->id,
@@ -85,7 +79,6 @@ class QuestionsController extends Controller
 
         $id = $request->id;
         $question = DB::table('questions')->where('id', $id)->first();
-
 
         // 次のID番号を取得するための変数を作成
         $next = DB::table('questions')->where('id', '>', $id)->first('id');
