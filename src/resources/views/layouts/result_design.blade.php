@@ -4,7 +4,7 @@
     <title>@yield('title')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <link href="{{ asset('css/result_design.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/result_design.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -21,12 +21,9 @@
                     </p>
                 </form>
             </div>
-
             <div class="content">
-
                 <div class="row mt-5 ml-3">
                     @yield('content')
-
                 </div>
             </div>
             <div class="main_footer mt-5">
@@ -40,7 +37,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
-    
 </body>
 
 </html>

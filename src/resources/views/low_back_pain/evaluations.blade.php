@@ -7,9 +7,7 @@
 @endsection
 @section('content')
     <h3>{{ Auth::user()->name }}様の診断結果はこうなりました。</h3>
-
     <div class="container mt-5">
-
         <div class="result">
             <h3>●　構造的な要因は{{ $kouzou->rank }}です。</h3>
         </div>
@@ -28,9 +26,7 @@
         <p>{{ $sonota->evaluation }}</p>
     </div>
 
-
     <p class="mt-5">今回の内容を見直して改善していきましょう。</p>
-
     <div class="accordion" id="accordionExample">
         <div class="accordion-item">
             @foreach ($high_scores as $high_score)
@@ -51,10 +47,9 @@
             @endforeach
         </div>
     </div>
-
     <div class="result mt-5">
-   今回の結果を保存しますか？
-</div>
+        今回の結果を保存しますか？
+    </div>
     <div class="row justify-content-around mt-5 fluid">
         <div class="col-3">
             <form action="/result" method="post">
@@ -64,7 +59,6 @@
                 <input type="hidden" name="shinin" value={{ $shinin->rank }}>
                 <input type="hidden" name="sonota" value={{ $sonota->rank }}>
                 <input type="hidden" name="date" value="{{ date('Y/m/d H:i:s') }}">
-        
                 <input type="submit" value="はい、登録します" class="btn btn-primary">
             </form>
         </div>
@@ -76,7 +70,5 @@
                 <input type="submit" value="登録せず、今までの結果を見る" class="btn btn-Success">
             </form>
         </div>
-      </div>
-
-  
+    </div>
 @endsection

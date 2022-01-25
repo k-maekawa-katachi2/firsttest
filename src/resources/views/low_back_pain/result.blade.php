@@ -19,12 +19,12 @@
             </thead>
             <tbody>
                 @foreach ($results as $result)
-                @php    
-                 $date = new \DateTime($result->date);
-                $test_date =$date->format('Y年m月d日');
-                @endphp
+                    @php
+                        $date = new \DateTime($result->date);
+                        $test_date = $date->format('Y年m月d日');
+                    @endphp
                     <tr>
-                        <th scope="row">{{$test_date}}</th>
+                        <th scope="row">{{ $test_date }}</th>
                         <td>{{ $result->kouzou }}</td>
                         <td>{{ $result->byouteki }}</td>
                         <td>{{ $result->shinin }}</td>
@@ -32,12 +32,11 @@
                     </tr>
                 @endforeach
             </tbody>
-
         </table>
     </div>
     <div class="row mt-5 ">
         <input type="submit" value="もう一度やる" class="btn btn-danger w-50" onclick="location.href='/questions'">
-      </div>
+    </div>
 @endsection
 @section('footer')
 
